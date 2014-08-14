@@ -35,7 +35,7 @@ var sliceHighColor = ["#c0392b","#2980b9","#d35400","#8e44ad","#f39c12"];
 
 function loadingContent() {
 
-	var counter = 10593170;
+	var counter = 10591470;
 
 	var countDownTimer = window.setInterval(function(){
 
@@ -64,7 +64,7 @@ function loadingDone() {
 
 
 	$("#title").css("visibility","visible").hide();
-	$("#logo,#title,#intro").fadeIn(3000);
+	$("#logo,#title,#intro,footer").fadeIn(3000);
 
 }
 
@@ -357,7 +357,7 @@ $(document).ready(function(){
 
 	prepRadialMenu();
 
-	$("#logo,#intro").hide();
+	$("#logo,#intro,footer").hide();
 	$("#title").css('visibility','hidden');
 
 	var countDown = document.createElement("h2");
