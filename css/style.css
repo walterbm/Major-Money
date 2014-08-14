@@ -1,0 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #fdfcf7; }
+
+#title {
+  text-align: center;
+  background: #2ecc71;
+  color: #fdfcf7;
+  font-size: 7rem;
+  font-weight: 700;
+  padding: 1rem; }
+
+.count_down {
+  text-align: center;
+  color: #2ecc71;
+  font-size: 5rem;
+  font-weight: 300;
+  padding: 1rem; }
+
+#chartHolder {
+  position: relative;
+  width: 45%;
+  margin: 0 auto; }
+
+#logo {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  z-index: -10;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-image: url(../img/bill.jpeg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  background-position: center;
+  border: 1rem solid #2c3e50; }
+
+#intro, #key {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #7f8c8d;
+  line-height: 1.5; }
+  #intro p, #key p {
+    padding: 0.5rem 0; }
+
+#intro {
+  padding-top: 1rem; }
+
+#key p {
+  text-align: center; }
+  #key p span {
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+    color: #fdfcf7;
+    border-radius: 5px; }
+
+.menu {
+  width: 300px;
+  height: 175px;
+  margin: 0 auto;
+  position: relative; }
+
+.circle {
+  width: 300px;
+  height: 175px;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out; }
+  .circle a {
+    text-decoration: none;
+    color: #2ecc71;
+    font-weight: 700;
+    font-size: 2rem;
+    display: block;
+    padding: 0.5rem;
+    position: absolute;
+    text-align: center; }
+  .circle a:hover {
+    color: #2c3e50; }
+
+.open.circle {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+
+.menu-button {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 40px);
+  text-decoration: none;
+  text-align: center;
+  color: #fdfcf7;
+  font-weight: 700;
+  font-size: 3rem;
+  border-radius: 50%;
+  display: block;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  padding: 10px;
+  background: #2ecc71;
+  -webkit-transition: -webkit-transform 1s ease, color 1s ease;
+          transition: transform 1s ease, color 1s ease; }
+
+.pulsate.menu-button {
+  -webkit-animation: pulse 4s infinite ease-in-out;
+          animation: pulse 4s infinite ease-in-out; }
+
+.menu-button:hover {
+  color: #2c3e50;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg); }
+
+.open.menu-button {
+  color: #2c3e50;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg); }
+
+input, select, button {
+  display: none; }
+
+#bloomberg {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+footer {
+  background: #2ecc71;
+  color: #fdfcf7;
+  margin-top: 20rem;
+  height: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300; }
+
+@-webkit-keyframes pulse {
+  0% {
+    font-size: 3rem; }
+
+  50% {
+    font-size: 4rem; }
+
+  100% {
+    font-size: 3rem; } }
+
+@keyframes pulse {
+  0% {
+    font-size: 3rem; }
+
+  50% {
+    font-size: 4rem; }
+
+  100% {
+    font-size: 3rem; } }
+@media (min-width: 900px) {
+  #intro, #key {
+    position: absolute;
+    width: 23%;
+    padding-top: 5rem; }
+
+  #intro {
+    top: 9rem;
+    left: 4rem; }
+
+  #key {
+    top: 9rem;
+    right: 4rem; }
+    #key p {
+      text-align: right; } }
+@media (max-width: 750px) {
+  html {
+    font-size: 40%; }
+
+  #intro, #key {
+    font-size: 2rem; } }

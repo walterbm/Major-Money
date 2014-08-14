@@ -1,0 +1,225 @@
+@import 'reset';
+
+$main-color: #2ecc71;
+$contrast-color: #2c3e50;
+$white: rgb(253, 252, 247);
+$text-color: #7f8c8d;
+
+$font-stack: 'Roboto', sans-serif;
+
+
+html {
+	font-size: 62.5%;
+}
+body{
+	font-family: $font-stack;
+	background: $white;
+}
+
+#title{
+
+	text-align: center;
+	background: $main-color;
+	color:$white;
+	font-size: 7rem;
+	font-weight: 700;
+	padding: 1rem;
+}
+.count_down{
+	text-align: center;
+	color: $main-color;
+	font-size: 5rem;
+	font-weight: 300;
+	padding: 1rem;
+}
+
+
+#chartHolder{
+	position: relative;
+	width: 45%;
+	margin: 0 auto;
+
+}
+#logo{
+
+	box-sizing: border-box;
+
+	display: block;
+    position: absolute;
+    z-index: -10;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    
+    border-radius: 50%;
+    background-image: url(../img/bill.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+    border: 1rem solid $contrast-color;
+}
+
+#intro, #key{
+	width: 80%;
+	margin: 0 auto;
+	font-size: 2.8rem;
+	font-weight: 300;
+	color: $text-color;
+	line-height: 1.5;
+
+	p{
+		padding: 0.5rem 0;
+	}
+}
+
+#intro{
+	padding-top: 1rem;
+}
+
+#key{
+	p{
+		text-align: center;
+		span{
+	    	font-weight: 400;
+	    	line-height: 1.5;
+	    	padding: 0 0.5rem;
+	    	color: $white;
+	    	border-radius: 5px;
+		}
+	}
+}
+
+//Radial Menu
+.menu{
+	width: 300px;
+	height: 175px;
+	margin: 0 auto;
+	position: relative;
+}
+.circle{
+	width: 300px;
+	height: 175px;
+	opacity: 0;
+
+	transform: scale(0);
+	transition: all 0.4s ease-out;
+
+	a{
+		text-decoration: none;
+		color: $main-color;
+		font-weight: 700;
+		font-size: 2rem;
+		display: block;
+		padding: 0.5rem;
+		position: absolute;
+		text-align: center;
+
+	}
+	a:hover{
+		color: $contrast-color;
+	}
+}
+.open.circle{
+	opacity: 1;
+
+	transform: scale(1);
+}
+.menu-button{
+	cursor: pointer;
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 40px);
+	text-decoration: none;
+	text-align: center;
+	color: $white;
+	font-weight: 700;
+	font-size: 3rem;
+	border-radius: 50%;
+	display: block;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	padding: 10px;
+	background: $main-color;
+
+	transition: transform 1s ease, color 1s ease;
+
+	
+	
+}
+.pulsate.menu-button{
+	animation: pulse 4s infinite ease-in-out;
+}
+
+.menu-button:hover{
+	color: $contrast-color;
+	transform: rotate(-180deg);
+}
+
+.open.menu-button{
+	color: $contrast-color;
+	transform: rotate(-180deg);
+}
+
+input,select,button{
+	display: none;
+}
+
+#bloomberg{
+	display: inline;
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+}
+
+footer{
+	background: $main-color;
+	color: $white;
+	margin-top: 20rem;
+	height: 2rem;
+	padding-top: 2rem;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 300;
+
+}
+
+@keyframes pulse {
+	0% { font-size: 3rem; }
+	50% { font-size: 4rem; }
+	100% { font-size: 3rem; }
+}
+
+
+@media (min-width:900px){
+	#intro, #key{
+		position: absolute;
+		width: 23%;
+		padding-top: 5rem;
+	}
+	#intro{
+		top: 9rem;
+		left: 4rem;
+	}
+	#key{
+		top: 9rem;
+		right: 4rem;
+		p{
+			text-align: right;
+		}
+	}
+}
+
+@media (max-width:750px){
+	html {
+		font-size: 40%;
+	}
+	#intro, #key{
+		font-size: 2rem;
+	}
+}
+
+
