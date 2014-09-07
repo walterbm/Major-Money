@@ -1,0 +1,49 @@
+!!! 5
+%html(lang="en")
+	%head
+		%meta(charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0')
+		%title Major Money
+		%link(rel='stylesheet' href='css/style.css')
+		%link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css')
+	%body
+		%h1#title Major Money
+		%img#loadingSpinner(src='img/loading.gif')
+		%h2#subtitleAmount $10,595,440.00
+		%div#chartHolder
+			%canvas#pieChart(width="400" height="400")
+			%span#logo
+		%div#intro
+			New York City Major <span id='majorName'>Bill DeBlasio</span> raised over <span id='majorMoney'>10.5</span> million dollars for his <span id='majorYear'>2013</span> campaign, but where did that money come from...
+			%div.menu.pulsate
+				?
+				%div.menuItems
+					%a#state States
+					%a#city Cities
+					%a#borough Boroughs
+					%a#zips Zips
+					%a#occupation Jobs
+					%a#maxDonations Max
+
+		%div#key
+
+		%select#database
+			%option(value='donorName')Donor Name
+			%option(value='cCode')C Code
+			%option(value='borough')Borough
+			%option(value='city')City
+			%option(value='state')State
+			%option(value='zips')Zip Code
+			%option(value='occupation')Occupation
+			%option(value='employer')Employer
+		%input#query(type='text') <button id='enter'>Enter</button>
+		%input#bloomberg(type='checkbox')
+
+		%footer Created by: WBM
+
+		%script(src='http://code.jquery.com/jquery-1.7.1.min.js')
+		%script(src='js/min/jquery.csv-0.71.min.js')
+		%script(src='js/min/Chart.min.js')
+		%script(src='js/min/project-min.js')
+
+
+

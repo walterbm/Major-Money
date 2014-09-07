@@ -7,7 +7,7 @@
 */
 
 
-//active data
+//source data is split by category and stored in these arrays for easier processing
 var donorName = [];
 var cCode = [];
 var borough = [];
@@ -18,6 +18,7 @@ var occupation = [];
 var employer = [];
 var amount = [];
 
+//global variable that store the sum of all donatios
 var totalContributions = 0;
 
 var dataReady = false;
@@ -32,42 +33,14 @@ var sliceMainColor = ["#e74c3c","#3498db","#e67e22","#9b59b6","#f1c40f"];
 var sliceHighColor = ["#c0392b","#2980b9","#d35400","#8e44ad","#f39c12"];
 
 
-
-function loadingContent() {
-
-	var counter = 10591470;
-
-	var countDownTimer = window.setInterval(function(){
-
-		var displayCount = counter.toString();
-
-		$(".count_down").html("$"+displayCount.slice(0,2)+","+displayCount.slice(2,5)+","+displayCount.slice(5,8)+".00");
-		if(counter===10595440){
-			window.clearInterval(countDownTimer);
-		}
-		counter+=10;
-
-	},1);
-	
-}
-
-function prepRadialMenu(){
-	var items = document.querySelectorAll('.circle a');
-
-	for(var i = 0, l = items.length; i < l; i++) {
-  		items[i].style.left = (38 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-  		items[i].style.top = (40 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
-	}
-}
-
+//fade reveal divs when loading is complete 
 function loadingDone() {
-
-
+	$('#loadingSpinner').fadeOut("fast");
 	$("#title").css("visibility","visible").hide();
-	$("#logo,#title,#intro,footer").fadeIn(3000);
-
+	$("#logo,#title,#subtitleAmount,#intro,footer").fadeIn(3000);
 }
 
+//initalizes the pie chart by handing Charts.js one slice equal to the total
 function initializePieChart(total,color,label){
 	var ctx = document.getElementById("pieChart").getContext("2d");
 	var pie = new Chart(ctx);
@@ -113,7 +86,8 @@ function fixBorough(boroughArray){
 	});
 	return boroughArray;
 }
-
+// takes and array and groups duplicate items (using string equality)
+// sums campaign amounts for groups and returns an object array with top five items
 function findTop(array){
 
 	var groupedArrayName = [];
@@ -124,30 +98,39 @@ function findTop(array){
 
 	$.each(array, function(index, value){
 
+		//is value already in array? then add the amount of the current value to first matching value
 		if($.inArray(value,groupedArrayName) !== -1){
 
 			groupedArrayAmount[$.inArray(value,groupedArrayName)] += amount[index];
 		}
+		//if value is not in array, add new value to group array and add amount
 		else{
 			groupedArrayName[groupIndex] = value;
 			groupedArrayAmount[groupIndex] = amount[index];
+			//move up group array
 			groupIndex++;
  		}
 	});
 
+
+	//test to see if first array value is one character in lenght, if so this must be the borough arrary
 	if(groupedArrayName[1].length === 1){
 		groupedArrayName = fixBorough(groupedArrayName);
 	}
 	
+	//take group array and convert it into an array of objects
 	$.each(groupedArrayName,function(index, value){
 
 		group.push({
+			//if value is empty, change it to "UNREPORTED"
+			//done here to avoid processing entire array but may have to be moved
 			category: (value !== "" ? groupedArrayName[index]:"UNREPORTED"),
 			amount: groupedArrayAmount[index]
 		});
 
 	});
 
+	//changing the native sort() function to sort the object "group" based on the .amount property and decending order
 	group.sort(function(one,two){
 		return two.amount - one.amount;
 	});
@@ -158,25 +141,27 @@ function findTop(array){
 	return group;
 }
 
+//generate the pie key by inserting paragraph elements into the #key div
 function generateKey(topArray){
 
+	//clear key by removing all current paragraph elements
 	$("#key p").remove();
 
+	//hide to allow transition
 	$("#key").hide();
 
+	//add a new paragraph based on number of object array elemenets
 	$.each(topArray, function(index){
 		$("#key").append("<p><span id=textColor"+index+">"+topArray[index].category+"</span> donations totaled <span id=amountColor"+index+">$"+(topArray[index].amount).toFixed(2)+"</span></p>");
 		$("#textColor" + index+","+"#amountColor" + index).css({"background":sliceMainColor[index]});
 	});
 
-
+	//fade in key once all the paragraph elements have been generated and inserted
 	$("#key").fadeIn(2000);
-
 }
 
 
 function graphTopData(total,topArray){
-
 
 	//required to fix a weird duplication glitch with Charts.js
 	$("#pieChart").replaceWith("<canvas id=\"pieChart\" width=\"400\" height=\"400\"></canvas>");
@@ -186,8 +171,7 @@ function graphTopData(total,topArray){
 	var topTotal = 0;
 
 
-	//converting the data into an array of objects that Charts.js can understand
-
+	//converting the object array from the topArray function into an array of objects that Charts.js can understand
 	$.each(topArray,function(index){
 		pieGraphData.push({
 			value: (topArray[index].amount/total),
@@ -200,7 +184,7 @@ function graphTopData(total,topArray){
 
 	});
 	
-
+	//calculating the remaing slice
 	pieGraphData.push({
 		value: ((total-topTotal)/total),
 		color: pieColor[0],
@@ -214,10 +198,11 @@ function graphTopData(total,topArray){
 	var pie = new Chart(ctx);
 	pie.Doughnut(pieGraphData,{animationEasing:"easeInBack", tooltipTemplate: "<%if (label){%><%=label%>: <%}%> <%= (value*100).toFixed(2) %>%", responsive: true});
 
+	//generating the key once the pie graph is ready
 	generateKey(topArray);
 }
 
-
+//simple function that searches for occurences of a specific item in array and sums amounts based on matching index
 function searchForSlice(array,query){
 
 	var total = 0;
@@ -232,9 +217,12 @@ function searchForSlice(array,query){
 
 }
 
+
+//function for graphic a single item
+//ideally this would be merged with generic graphic function above
+
 //handles the actual graphing of the data through Charts.js
 function graphSingleData(total,slice,label){
-
 
 	//required to fix a weird duplication glitch with Charts.js
 	$("#pieChart").replaceWith("<canvas id=\"pieChart\" width=\"400\" height=\"400\"></canvas>");
@@ -280,6 +268,9 @@ function graphSingleData(total,slice,label){
 
 }
 
+
+//implementing bloomberg data
+//needs a lot of work in order to be generic
 function bloombergify(){
 
 	//clear variables
@@ -293,9 +284,6 @@ function bloombergify(){
 
 	$(".menu .circle a").remove();
 	$(".menu .circle").append("<a id=\"donors\">Donors</a>");
-
-
-	prepRadialMenu();
 
 
 	$("#majorName").html("Michael Bloomberg");
@@ -355,27 +343,19 @@ function bloombergify(){
 
 $(document).ready(function(){
 
-	prepRadialMenu();
-
-	$("#logo,#intro,footer").hide();
+	$("#logo,#subtitleAmount,#intro,footer").hide();
 	$("#title").css('visibility','hidden');
-
-	var countDown = document.createElement("h2");
-	var mainDiv = document.getElementById("chartHolder");
-	countDown.setAttribute("class", "count_down");
-	countDown.appendChild(document.createTextNode("$10,595,440.00"));
-	document.body.insertBefore(countDown,mainDiv);
 
 
 	$.ajax({
 		url: "csv/2013_Campaign_Contributions.csv",
 		type: "GET",
-		beforeSend: loadingContent,
 		success: function (data) {
 
 			//importing the campaign donation data from a 3.5 MB .csv file
 			//most taxing step
-			//probably should be handled by a backend server but this is FEWD not BEWD!
+			//completly abusing the client, this should be handled by a server
+			//...but I don't know how to perform the backend processing yet
 			var campaign = $.csv.toArrays(data);
 
 			for(var i=1; i<campaign.length; i++){
@@ -397,7 +377,7 @@ $(document).ready(function(){
 
 			dataReady = true;
 
-			initializePieChart(totalContributions,pieColor,"$10 Million");
+			initializePieChart(totalContributions,pieColor);
 
 		},
 		complete: loadingDone
@@ -413,23 +393,34 @@ $(document).ready(function(){
 	});
 		
 
-	$(".menu").mouseenter(function(){
-		$(".menu-button").addClass("open");
-	});
-	$(".menu").mouseleave(function(){
-		$(".menu-button").removeClass("open");
+	//bar menu is composed of one container div and one menu item div
+	//menu item div is hiden/shown depening on mouse/click event
+	//click events are mostly for touch devices	
+	$('.menu').on({
+		mouseenter: function(){
+			$(".menuItems").slideDown();
+		},
+		mouseleave: function(){
+			$(".menuItems").slideUp();
+		},
+		click: function(){
+			if($('.menuItems').is(':hidden')){
+				$(".menuItems").slideDown();
+			}
+			else{
+				$('.menuItems').slideUp('slow');
+			}
+		}
 	});
 
-	$(".menu-button").on("click",function(e){
-		e.preventDefault();
-		$(".menu-button").removeClass("pulsate");
-		$(".circle").toggleClass("open");
-	});
-	
+	$(".menuItems a").on("click", function(){
+		//pulsate class is just to draw the user's attention on load
+		//after first user interaction it's removed
+		$('.menu').removeClass('pulsate');
 
-	$(".circle a").on("click", function(){
-		$(".circle,.menu-button").removeClass("open");
-
+		//id of menu selection is matched to corresponding array
+		//'maxDonations' is not an array 
+		//instead the program searches through 'amount' array instances of specific value
 		if($(this).attr("id") === "maxDonations"){
 			var sliceValue = searchForSlice(amount,4950);
 			graphSingleData(totalContributions,sliceValue,"MAX DONATIONS");

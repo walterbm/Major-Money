@@ -1,55 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>Major Money</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link href='css/style.css' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    <h1 id="title">Major Money</h1>
-    <div id="chartHolder">
-        <canvas id="pieChart" width="400" height="400"></canvas>
-        <span id="logo"></span>
+  </head>
+  <body>
+    <h1 id='title'>Major Money</h1>
+    <img id='loadingSpinner' src='img/loading.gif'>
+    <h2 id='subtitleAmount'>$10,595,440.00</h2>
+    <div id='chartHolder'>
+      <canvas height='400' id='pieChart' width='400'></canvas>
+      <span id='logo'></span>
     </div>
-    <div id="intro">
-        New York City Major, <span id="majorName">Bill deBlasio</span>, raised over $<span id="majorMoney">10.5</span> Million Dollars for his <span id="majorYear">2013</span> campaign, but where did that money come from...
-        <nav class="menu">
-            <div class="circle">
-                <a id="state">States</a>
-                <a id="city">Cities</a>
-                <a id="borough">Boroughs</a>
-                <a id="zips">Zips</a> 
-                <a id="occupation">Jobs</a>
-                <a id="maxDonations">Max</a>
-            </div>
-            <a class="menu-button pulsate">?</a>
-        </nav>
+    <div id='intro'>
+      New York City Major <span id='majorName'>Bill DeBlasio</span> raised over <span id='majorMoney'>10.5</span> million dollars for his <span id='majorYear'>2013</span> campaign, but where did that money come from...
+      <div class='menu pulsate'>
+        ?
+        <div class='menuItems'>
+          <a id='state'>States</a>
+          <a id='city'>Cities</a>
+          <a id='borough'>Boroughs</a>
+          <a id='zips'>Zips</a>
+          <a id='occupation'>Jobs</a>
+          <a id='maxDonations'>Max</a>
+        </div>
+      </div>
     </div>
-    <div id="key">
-        
-    </div>
-
-    <select id="database">
-        <option value="donorName">Donor Name</option>
-        <option value="cCode">C Code</option>
-        <option value="borough">Borough</option>
-        <option value="city">City</option>
-        <option value="state">State</option>
-        <option value="zips">Zip Code</option>
-        <option value="occupation">Occupation</option>
-        <option value="employer">Employer</option>
+    <div id='key'></div>
+    <select id='database'>
+      <option value='donorName'>Donor Name</option>
+      <option value='cCode'>C Code</option>
+      <option value='borough'>Borough</option>
+      <option value='city'>City</option>
+      <option value='state'>State</option>
+      <option value='zips'>Zip Code</option>
+      <option value='occupation'>Occupation</option>
+      <option value='employer'>Employer</option>
     </select>
-    <input id="query" type="text"><button id="enter">Enter</button>
-    <input id="bloomberg" type="checkbox"></input>
-
+    <input id='query' type='text'><button id='enter'>Enter</button></input>
+    <input id='bloomberg' type='checkbox'>
     <footer>Created by: WBM</footer>
-    
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="js/min/jquery.csv-0.71.min.js"></script>
-    <script src="js/min/Chart.min.js"></script>
-    <script src="js/min/project-min.js"></script>
-    
-</body>
+    <script src='http://code.jquery.com/jquery-1.7.1.min.js'></script>
+    <script src='js/min/jquery.csv-0.71.min.js'></script>
+    <script src='js/min/Chart.min.js'></script>
+    <script src='js/min/project-min.js'></script>
+  </body>
 </html>

@@ -25,15 +25,18 @@ body{
 	font-weight: 700;
 	padding: 1rem;
 }
-.count_down{
+#subtitleAmount{
 	text-align: center;
 	color: $main-color;
 	font-size: 5rem;
 	font-weight: 300;
 	padding: 1rem;
 }
+#loadingSpinner{
+	display: block;
+	margin: 0 auto;
 
-
+}
 #chartHolder{
 	position: relative;
 	width: 45%;
@@ -91,77 +94,45 @@ body{
 	}
 }
 
-//Radial Menu
 .menu{
-	width: 300px;
-	height: 175px;
-	margin: 0 auto;
-	position: relative;
-}
-.circle{
-	width: 300px;
-	height: 175px;
-	opacity: 0;
-
-	transform: scale(0);
-	transition: all 0.4s ease-out;
-
-	a{
-		text-decoration: none;
-		color: $main-color;
-		font-weight: 700;
-		font-size: 2rem;
-		display: block;
-		padding: 0.5rem;
-		position: absolute;
-		text-align: center;
-
-	}
-	a:hover{
-		color: $contrast-color;
-	}
-}
-.open.circle{
-	opacity: 1;
-
-	transform: scale(1);
-}
-.menu-button{
 	cursor: pointer;
-	position: absolute;
-	top: calc(50% - 35px);
-	left: calc(50% - 40px);
-	text-decoration: none;
-	text-align: center;
-	color: $white;
-	font-weight: 700;
-	font-size: 3rem;
-	border-radius: 50%;
-	display: block;
-	height: 50px;
-	width: 50px;
-	line-height: 50px;
-	padding: 10px;
+	width: 80%;
+	margin: 2rem auto;
 	background: $main-color;
+	border-radius: 1rem;
+	font-weight: 700;
+	color: $white;
+	text-align: center;
+	transition: background 0.4s ease;
 
-	transition: transform 1s ease, color 1s ease;
-
-	
-	
+	&:hover{
+		background: #27ae60;
+	}
+	.menuItems{
+		display: none;
+		background: $contrast-color;
+		text-align: left;
+		font-weight: 300;
+		border-bottom-left-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+	}
+	a{
+		display: block;
+		padding-left: 1rem;
+		border-top: 1px solid $text-color;
+		border-bottom: 1px solid $text-color;
+		&:last-of-type{
+			border-bottom: none;
+		}
+		&:hover{
+			color: $main-color;
+		}
+	}
 }
-.pulsate.menu-button{
+.pulsate{
 	animation: pulse 4s infinite ease-in-out;
 }
 
-.menu-button:hover{
-	color: $contrast-color;
-	transform: rotate(-180deg);
-}
-
-.open.menu-button{
-	color: $contrast-color;
-	transform: rotate(-180deg);
-}
 
 input,select,button{
 	display: none;
@@ -188,9 +159,9 @@ footer{
 }
 
 @keyframes pulse {
-	0% { font-size: 3rem; }
-	50% { font-size: 4rem; }
-	100% { font-size: 3rem; }
+	0% { background: $main-color; }
+	50% { background: darken($main-color,20%); }
+	100% { background: $main-color; }
 }
 
 
