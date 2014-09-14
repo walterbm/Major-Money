@@ -17,26 +17,42 @@ body{
 }
 
 #title{
-
 	text-align: center;
 	background: $main-color;
 	color:$white;
-	font-size: 7rem;
+	font-size: 8rem;
 	font-weight: 700;
 	padding: 1rem;
 }
-#subtitleAmount{
+#subtitleAmount,#loading{
 	text-align: center;
 	color: $main-color;
 	font-size: 5rem;
 	font-weight: 300;
 	padding: 1rem;
 }
-#loadingSpinner{
+.majors{
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+	top: 0;
+	cursor: pointer;
 	display: block;
-	margin: 0 auto;
+	margin-top: 1rem;
+	width: 8rem;
+	border-radius: 50%;
+	border: 0.5rem solid $contrast-color;
 
 }
+#bloomberg,#deBlasio{
+	float: left;
+	margin-left: 4rem;
+}
+#giuliani,#dinkins{
+	float: right;
+	margin-right: 4rem;
+}
+
 #chartHolder{
 	position: relative;
 	width: 45%;
@@ -60,6 +76,8 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+
+    transition: background 1s ease;
 
     border: 1rem solid $contrast-color;
 }
@@ -107,6 +125,9 @@ body{
 
 	&:hover{
 		background: #27ae60;
+		.menuItems{
+			display: block;
+		}
 	}
 	.menuItems{
 		display: none;
@@ -128,6 +149,9 @@ body{
 			color: $main-color;
 		}
 	}
+	#donors{
+		display: none;
+	}
 }
 .pulsate{
 	animation: pulse 4s infinite ease-in-out;
@@ -138,29 +162,33 @@ input,select,button{
 	display: none;
 }
 
-#bloomberg{
-	display: inline;
-	position: fixed;
-	top: 0;
-	left: 0;
-	
-}
 
 footer{
 	background: $main-color;
 	color: $white;
-	margin-top: 20rem;
-	height: 2rem;
-	padding-top: 2rem;
+	margin-top: 20%;
+	height: 3rem;
+	padding-top: 1rem;
 	text-align: center;
 	font-size: 1rem;
 	font-weight: 300;
+	p{
+		padding: 0.25rem;
+	}
+	a{
+		text-decoration: none;
+		color: $white;
+		transition: color 0.5s ease;
+		&:hover{
+			color: $contrast-color;
+		}
+	}
 
 }
 
 @keyframes pulse {
 	0% { background: $main-color; }
-	50% { background: darken($main-color,20%); }
+	50% { background: darken($main-color,15%); }
 	100% { background: $main-color; }
 }
 

@@ -7,21 +7,19 @@
 */
 
 
-//source data is split by category and stored in these arrays for easier processing
-var donorName = [];
-var cCode = [];
-var borough = [];
-var city = [];
-var state = [];
-var zips = [];
-var occupation = [];
-var employer = [];
-var amount = [];
+
+//major's campaign data is stored in objects with varying properties for each category
+var deBlasio = {};
+var bloomberg = {};
+var giuliani = {};
+var dinkins = {};
 
 //global variable that store the sum of all donatios
 var totalContributions = 0;
 
 var dataReady = false;
+
+var majorMode = "deBlasio";
 
 
 //main pie colors in regular and highlight
@@ -33,15 +31,45 @@ var sliceMainColor = ["#e74c3c","#3498db","#e67e22","#9b59b6","#f1c40f"];
 var sliceHighColor = ["#c0392b","#2980b9","#d35400","#8e44ad","#f39c12"];
 
 
-//fade reveal divs when loading is complete 
-function loadingDone() {
-	$('#loadingSpinner').fadeOut("fast");
-	$("#title").css("visibility","visible").hide();
-	$("#logo,#title,#subtitleAmount,#intro,footer").fadeIn(3000);
+//helper function for isolating the columns on the original data array
+function compileColumn(array,column){
+	var compiledArray = [];
+
+	for(var i=1; i<array.length; i++){
+		compiledArray[i-1] = array[i][column].toUpperCase();
+	}
+
+	return compiledArray;
+}
+
+//helper function for isolating the columns on the original data array
+//separate function to preserve amount as a float
+function compileAmount(array){
+	var compiledArray = [];
+
+	for(var i=1; i<array.length; i++){
+		compiledArray[i-1] = parseFloat(array[i][28]);
+	}
+
+	return compiledArray;
+}
+
+//helper function simply calculates the total amount of contributions
+function getTotalContributions(major){
+	totalContributions = 0;
+
+	$.each(major.amount,function(index, value){
+		totalContributions += value;
+	});
+
+	return totalContributions;
 }
 
 //initalizes the pie chart by handing Charts.js one slice equal to the total
 function initializePieChart(total,color,label){
+	//required to fix a weird duplication glitch with Charts.js
+	$("#pieChart").replaceWith("<canvas id=\"pieChart\" width=\"400\" height=\"400\"></canvas>");
+
 	var ctx = document.getElementById("pieChart").getContext("2d");
 	var pie = new Chart(ctx);
 	var initialData = [
@@ -55,8 +83,23 @@ function initializePieChart(total,color,label){
 	pie.Doughnut(initialData,{segmentShowStroke: false,showTooltips: false,animationEasing: "easeInOutCubic", responsive: true});
 }
 
+//fade in divs when loading is complete 
+function loadingDone() {
+
+	getTotalContributions(deBlasio);
+		
+	dataReady = true;
+
+	initializePieChart(totalContributions,pieColor);
+
+	$('#loading').fadeOut("fast");
+	$("#title,.majors").css("visibility","visible").hide();
+	$("#logo,#title,#subtitleAmount,#intro,footer,.majors").fadeIn(3000);
+
+}
+
 //source data listed Boroughs as single letter codes
-//this expands the grouped array without modifying the original array or source data
+//this function expands the display array without modifying the original array or source data
 function fixBorough(boroughArray){
 	$.each(boroughArray, function(index, value){
 		switch(value){
@@ -86,9 +129,10 @@ function fixBorough(boroughArray){
 	});
 	return boroughArray;
 }
+
 // takes and array and groups duplicate items (using string equality)
 // sums campaign amounts for groups and returns an object array with top five items
-function findTop(array){
+function findTop(major,property){
 
 	var groupedArrayName = [];
 	var groupedArrayAmount = [];
@@ -96,22 +140,21 @@ function findTop(array){
 
 	var group = [];
 
-	$.each(array, function(index, value){
+	//iterate through major.property array to group values
+	for(var i=0; i<major[property].length; i++){
+		//is value already in category array? then add the amount of the current value to first matching value
+		if($.inArray(major[property][i],groupedArrayName) !== -1){
 
-		//is value already in array? then add the amount of the current value to first matching value
-		if($.inArray(value,groupedArrayName) !== -1){
-
-			groupedArrayAmount[$.inArray(value,groupedArrayName)] += amount[index];
+			groupedArrayAmount[$.inArray(major[property][i],groupedArrayName)] += major.amount[i];
 		}
 		//if value is not in array, add new value to group array and add amount
 		else{
-			groupedArrayName[groupIndex] = value;
-			groupedArrayAmount[groupIndex] = amount[index];
+			groupedArrayName[groupIndex] = major[property][i];
+			groupedArrayAmount[groupIndex] = major.amount[i];
 			//move up group array
 			groupIndex++;
  		}
-	});
-
+	}
 
 	//test to see if first array value is one character in lenght, if so this must be the borough arrary
 	if(groupedArrayName[1].length === 1){
@@ -127,7 +170,6 @@ function findTop(array){
 			category: (value !== "" ? groupedArrayName[index]:"UNREPORTED"),
 			amount: groupedArrayAmount[index]
 		});
-
 	});
 
 	//changing the native sort() function to sort the object "group" based on the .amount property and decending order
@@ -138,6 +180,7 @@ function findTop(array){
 	//taking only top five for display purposes 
 	group = group.slice(0,5);
 
+	console.log(group);
 	return group;
 }
 
@@ -203,28 +246,25 @@ function graphTopData(total,topArray){
 }
 
 //simple function that searches for occurences of a specific item in array and sums amounts based on matching index
-function searchForSlice(array,query){
+function searchForSlice(major,property,query){
 
 	var total = 0;
 
-	$.each(array, function(index, value){
-		if (value === query){
-			total += amount[index];
+	for(var i=0; i<major[property].length; i++){
+		if (major[property][i] === query){
+			total += major.amount[i];	
 		}
-	});
-	console.log(total);
-	return total;
+	}
 
+	return total;
 }
 
 
 //function for graphic a single item
-//ideally this would be merged with generic graphic function above
-
 //handles the actual graphing of the data through Charts.js
 function graphSingleData(total,slice,label){
 
-	//required to fix a weird duplication glitch with Charts.js
+	//required to fix a duplication glitch with Charts.js
 	$("#pieChart").replaceWith("<canvas id=\"pieChart\" width=\"400\" height=\"400\"></canvas>");
 
 	var pieGraphData = [];
@@ -268,130 +308,126 @@ function graphSingleData(total,slice,label){
 
 }
 
+function loadAllData(){
 
-//implementing bloomberg data
-//needs a lot of work in order to be generic
-function bloombergify(){
+	//importing the campaign donation data from a ≈ 4 MB .csv file
+	//most taxing step
+	//abusing the client, ideally this should be processed by a backend server
 
-	//clear variables
-	totalContributions = 0;
-	while(amount.length > 0) {
-    	amount.pop();
-	}
+	var deBlasioURL = "csv/2013_Campaign_Contributions.csv";
+	var bloombergURL = "csv/2009_Campaign_Contributions.csv";
+	var giulianiURL = "csv/1994_Campaign_Contributions.csv";
+	var dinkinsURL = "csv/1990_Campaign_Contributions.csv";
 
-	$("#logo,#intro,#key").hide();
-	$("#title").css('visibility','hidden');
+	$.when(
+		$.get(dinkinsURL,function(data){
 
-	$(".menu .circle a").remove();
-	$(".menu .circle").append("<a id=\"donors\">Donors</a>");
-
-
-	$("#majorName").html("Michael Bloomberg");
-	$("#majorMoney").html("100");
-	$("#majorYear").html("2009");
-	$("#logo").css({"background-image":"url(../img/michael.jpg)"});
-
-	$.ajax({
-		url: "csv/2009_Campaign_Contributions.csv",
-		type: "GET",
-		success: function (data) {
-
-			//importing the campaign donation data from a 3.5 MB .csv file
-			//most taxing step
-			//probably should be handled by a backend server but this is FEWD not BEWD!
 			var campaign = $.csv.toArrays(data);
 
-			for(var i=1; i<campaign.length; i++){
-				donorName[i-1] = campaign[i][13].toUpperCase();
-				cCode[i-1] = campaign[i][14].toUpperCase();
-				borough[i-1] = campaign[i][18].toUpperCase();
-				city[i-1] = campaign[i][19].toUpperCase();
-				state[i-1] = campaign[i][20].toUpperCase();
-				zips[i-1] = campaign[i][21];
-				occupation[i-1] = campaign[i][22].toUpperCase();
-				employer[i-1] = campaign[i][23].toUpperCase();
-				amount[i-1] = parseFloat(campaign[i][28]);
-			}
+			dinkins.borough = compileColumn(campaign,18);
+			dinkins.city = compileColumn(campaign,19);
+			dinkins.state = compileColumn(campaign,20);
+			dinkins.zips = compileColumn(campaign,21);
+			dinkins.occupation = compileColumn(campaign,22);
+			dinkins.amount = compileAmount(campaign);
 
-			$.each(amount,function(index, value){
-				totalContributions += value;
+			$("#loading").append(".");
 
-			});
+		}),
+		$.get(giulianiURL,function(data){
 
+			var campaign = $.csv.toArrays(data);
 
-			dataReady = true;
+			giuliani.borough = compileColumn(campaign,18);
+			giuliani.city = compileColumn(campaign,19);
+			giuliani.state = compileColumn(campaign,20);
+			giuliani.zips = compileColumn(campaign,21);
+			giuliani.occupation = compileColumn(campaign,22);
+			giuliani.amount = compileAmount(campaign);
 
-			console.log(totalContributions);
-			console.log(donorName[3]);
+			$("#loading").append(".");
 
-			var displayCount = totalContributions.toString();
-			$(".count_down").html("$"+displayCount.slice(0,3)+","+displayCount.slice(3,6)+","+displayCount.slice(6,9)+".00");
+		}),
+		$.get(bloombergURL,function(data){
 
-			initializePieChart(totalContributions,pieColor,"");
+			var campaign = $.csv.toArrays(data);
 
-		},
-		complete: loadingDone
-	});
+			bloomberg.donorName = compileColumn(campaign,13);
+			bloomberg.borough = compileColumn(campaign,18);
+			bloomberg.city = compileColumn(campaign,19);
+			bloomberg.state = compileColumn(campaign,20);
+			bloomberg.zips = compileColumn(campaign,21);
+			bloomberg.occupation = compileColumn(campaign,22);
+			bloomberg.employer = compileColumn(campaign,23);
+			bloomberg.amount = compileAmount(campaign);
 
-	$("#donors").on("click", function(){
-		console.log("!!!");
-		var sliceValue = searchForSlice(donorName,"BLOOMBERG, MICHAEL R");
-		graphSingleData(totalContributions,sliceValue,"BLOOMBERG");
-	});
+			$("#loading").append(".");
 
+		}),
+		$.get(deBlasioURL,function(data){
+
+			var campaign = $.csv.toArrays(data);
+
+			deBlasio.borough = compileColumn(campaign,18);
+			deBlasio.city = compileColumn(campaign,19);
+			deBlasio.state = compileColumn(campaign,20);
+			deBlasio.zips = compileColumn(campaign,21);
+			deBlasio.occupation = compileColumn(campaign,22);
+			deBlasio.amount = compileAmount(campaign);
+
+			$("#loading").append(".");
+
+		})
+		
+		).then(loadingDone);
 }
+
 
 $(document).ready(function(){
 
 	$("#logo,#subtitleAmount,#intro,footer").hide();
-	$("#title").css('visibility','hidden');
+	$("#title,.majors").css('visibility','hidden');
+	
+
+	loadAllData();
+
+	$(".majors").on("click", function(){
+
+		//set major mode to selection based on image #id
+		majorMode = $(this).attr("id");
+
+		//calculate new total
+		var total = Math.round(getTotalContributions(window[majorMode]));
 
 
-	$.ajax({
-		url: "csv/2013_Campaign_Contributions.csv",
-		type: "GET",
-		success: function (data) {
+		//clear graph and key
+		initializePieChart(total,pieColor);
+		$("#key p").remove();
+		$("#key").hide();
 
-			//importing the campaign donation data from a 3.5 MB .csv file
-			//most taxing step
-			//completly abusing the client, this should be handled by a server
-			//...but I don't know how to perform the backend processing yet
-			var campaign = $.csv.toArrays(data);
-
-			for(var i=1; i<campaign.length; i++){
-				// donorName[i-1] = campaign[i][13].toUpperCase();
-				// cCode[i-1] = campaign[i][14].toUpperCase();
-				borough[i-1] = campaign[i][18].toUpperCase();
-				city[i-1] = campaign[i][19].toUpperCase();
-				state[i-1] = campaign[i][20].toUpperCase();
-				zips[i-1] = campaign[i][21];
-				occupation[i-1] = campaign[i][22].toUpperCase();
-				employer[i-1] = campaign[i][23].toUpperCase();
-				amount[i-1] = parseFloat(campaign[i][28]);
-			}
-
-			$.each(amount,function(index, value){
-				totalContributions += value;
-
-			});
-
-			dataReady = true;
-
-			initializePieChart(totalContributions,pieColor);
-
-		},
-		complete: loadingDone
-	});
-
-	$("#bloomberg").on("change",function(){
-		if(this.checked === true){
-			bloombergify();
+		//handle bloomberg special case
+		//because bloomberg's only contributor was himself his data is handled diffrently
+		//only option shown is "Donor"
+		//this hides other options when Bloomberg is selected and hides "Donor" when other majors are selcted
+		if( $(this).attr("id") === "bloomberg"){
+			$(".menuItems a").hide();
+			$("#donors").show();
 		}
 		else{
-			location.reload();
+			$(".menuItems a").show();
+			$("#donors").hide();
 		}
+
+		//replace logo, subtitle, and other text to match selected major
+		$("#logo").css({"background-image":"url("+$(this).attr("src")+")"});
+		$("#subtitleAmount").html("$"+total+".00");
+		$("#majorName").html($(this).attr("alt"));
+		$("#majorYear").html($(this).attr("data-year"));
+		$("#majorMoney").html(total.toString().slice(0,(total.toString().length-6)));
+
 	});
-		
+
+
 
 	//bar menu is composed of one container div and one menu item div
 	//menu item div is hiden/shown depening on mouse/click event
@@ -418,15 +454,12 @@ $(document).ready(function(){
 		//after first user interaction it's removed
 		$('.menu').removeClass('pulsate');
 
-		//id of menu selection is matched to corresponding array
-		//'maxDonations' is not an array 
-		//instead the program searches through 'amount' array instances of specific value
-		if($(this).attr("id") === "maxDonations"){
-			var sliceValue = searchForSlice(amount,4950);
-			graphSingleData(totalContributions,sliceValue,"MAX DONATIONS");
+		if($(this).attr("id")==="donors"){
+			var sliceValue = searchForSlice(window[majorMode],"donorName","BLOOMBERG, MICHAEL R");
+			graphSingleData(getTotalContributions(window[majorMode]),sliceValue,"BLOOMBERG");
 		}
 		else{
-			var topArrayReady = findTop(window[$(this).attr("id")]);
+			var topArrayReady = findTop(window[majorMode],$(this).attr("id"));
 			graphTopData(totalContributions,topArrayReady);
 			generateKey(topArrayReady);
 		}
@@ -435,13 +468,10 @@ $(document).ready(function(){
 	//testing for single item search queries 
 	$("#enter").on("click", function(){
 
-		var sliceValue = searchForSlice(window[$("#database").val()],$("#query").val().toUpperCase());
-
-		graphSingleData(totalContributions,sliceValue,$("#query").val());
+		var sliceValue = searchForSlice(window[majorMode],$("#database").val(),$("#query").val().toUpperCase());
+		graphSingleData(getTotalContributions(window[majorMode]),sliceValue,$("#query").val());
 
 	});
-
-
 	
 });
 

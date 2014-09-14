@@ -4,16 +4,24 @@
 		%meta(charset='utf-8' name='viewport' content='width=device-width, initial-scale=1.0')
 		%title Major Money
 		%link(rel='stylesheet' href='css/style.css')
+		%link(rel='stylesheet' href='css/outdatedbrowser.min.css')
 		%link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css')
 	%body
+		%img.majors#deBlasio(src='img/bill.jpeg' alt='Bill de Blasio' data-year='2013')
+		%img.majors#bloomberg(src='img/michael.jpg' alt='Michael Bloomberg' data-year='2009')
+		%img.majors#dinkins(src='img/david.jpg' alt='David Dinkins' data-year='1994')
+		%img.majors#giuliani(src='img/rudy.jpeg' alt='Rudy Giuliani' data-year='1990')
+
+
 		%h1#title Major Money
-		%img#loadingSpinner(src='img/loading.gif')
+		%h2#loading Loading
 		%h2#subtitleAmount $10,595,440.00
+
 		%div#chartHolder
 			%canvas#pieChart(width="400" height="400")
 			%span#logo
 		%div#intro
-			New York City Major <span id='majorName'>Bill DeBlasio</span> raised over <span id='majorMoney'>10.5</span> million dollars for his <span id='majorYear'>2013</span> campaign, but where did that money come from...
+			New York City Major <span id='majorName'>Bill de Blasio</span> raised over <span id='majorMoney'>10</span> million dollars for his <span id='majorYear'>2013</span> campaign, but where did that money come from...
 			%div.menu.pulsate
 				?
 				%div.menuItems
@@ -21,10 +29,12 @@
 					%a#city Cities
 					%a#borough Boroughs
 					%a#zips Zips
+					%a#donors Donors
 					%a#occupation Jobs
-					%a#maxDonations Max
 
 		%div#key
+
+
 
 		%select#database
 			%option(value='donorName')Donor Name
@@ -36,10 +46,14 @@
 			%option(value='occupation')Occupation
 			%option(value='employer')Employer
 		%input#query(type='text') <button id='enter'>Enter</button>
-		%input#bloomberg(type='checkbox')
 
-		%footer Created by: WBM
+		%footer 
+			%p Data from New York City Campaign Finance Board
+			%p 
+				Created by: 
+				%a(href='http://walterbellermoral.es')WBM
 
+		%script(src='js/min/outdatedbrowser.min.js')
 		%script(src='http://code.jquery.com/jquery-1.7.1.min.js')
 		%script(src='js/min/jquery.csv-0.71.min.js')
 		%script(src='js/min/Chart.min.js')

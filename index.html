@@ -4,18 +4,23 @@
     <meta charset='utf-8' content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>Major Money</title>
     <link href='css/style.css' rel='stylesheet'>
+    <link href='css/outdatedbrowser.min.css' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
+    <img alt='Bill de Blasio' class='majors' data-year='2013' id='deBlasio' src='img/bill.jpeg'>
+    <img alt='Michael Bloomberg' class='majors' data-year='2009' id='bloomberg' src='img/michael.jpg'>
+    <img alt='David Dinkins' class='majors' data-year='1994' id='dinkins' src='img/david.jpg'>
+    <img alt='Rudy Giuliani' class='majors' data-year='1990' id='giuliani' src='img/rudy.jpeg'>
     <h1 id='title'>Major Money</h1>
-    <img id='loadingSpinner' src='img/loading.gif'>
+    <h2 id='loading'>Loading</h2>
     <h2 id='subtitleAmount'>$10,595,440.00</h2>
     <div id='chartHolder'>
       <canvas height='400' id='pieChart' width='400'></canvas>
       <span id='logo'></span>
     </div>
     <div id='intro'>
-      New York City Major <span id='majorName'>Bill DeBlasio</span> raised over <span id='majorMoney'>10.5</span> million dollars for his <span id='majorYear'>2013</span> campaign, but where did that money come from...
+      New York City Major <span id='majorName'>Bill de Blasio</span> raised over <span id='majorMoney'>10</span> million dollars for his <span id='majorYear'>2013</span> campaign, but where did that money come from...
       <div class='menu pulsate'>
         ?
         <div class='menuItems'>
@@ -23,8 +28,8 @@
           <a id='city'>Cities</a>
           <a id='borough'>Boroughs</a>
           <a id='zips'>Zips</a>
+          <a id='donors'>Donors</a>
           <a id='occupation'>Jobs</a>
-          <a id='maxDonations'>Max</a>
         </div>
       </div>
     </div>
@@ -40,8 +45,14 @@
       <option value='employer'>Employer</option>
     </select>
     <input id='query' type='text'><button id='enter'>Enter</button></input>
-    <input id='bloomberg' type='checkbox'>
-    <footer>Created by: WBM</footer>
+    <footer>
+      <p>Data from New York City Campaign Finance Board</p>
+      <p>
+        Created by:
+        <a href='http://walterbellermoral.es'>WBM</a>
+      </p>
+    </footer>
+    <script src='js/min/outdatedbrowser.min.js'></script>
     <script src='http://code.jquery.com/jquery-1.7.1.min.js'></script>
     <script src='js/min/jquery.csv-0.71.min.js'></script>
     <script src='js/min/Chart.min.js'></script>
