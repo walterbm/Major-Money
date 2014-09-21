@@ -12,6 +12,7 @@ html {
 	font-size: 62.5%;
 }
 body{
+	width: 100%;
 	font-family: $font-stack;
 	background: $white;
 }
@@ -74,7 +75,7 @@ body{
     border-radius: 50%;
     background-image: url(../img/bill.jpeg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 110%;
     background-position: center;
 
     transition: background 1s ease;
@@ -193,7 +194,7 @@ footer{
 }
 
 
-@media (min-width:900px){
+@media (min-width:1050px){
 	#intro, #key{
 		position: absolute;
 		width: 23%;
@@ -212,9 +213,21 @@ footer{
 	}
 }
 
-@media (max-width:750px){
+@media (max-width:1050px){
 	html {
 		font-size: 40%;
+	}
+	.majors{
+		width: 6rem;
+	}
+	#bloomberg,#deBlasio{
+	margin-left: 2rem;
+	}
+	#giuliani,#dinkins{
+	margin-right: 2rem;
+	}
+	#logo{
+		border-width: 0.5rem;
 	}
 	#intro, #key{
 		font-size: 2rem;
