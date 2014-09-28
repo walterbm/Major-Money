@@ -109,7 +109,9 @@ function fixBorough(boroughArray){
 			case "Z":
 				boroughArray[index] = "OUTSIDE NYC";
 				break;
-			case "K":
+			//current designation for Brooklyn is "K"
+			//pre 1994 "B" was the designation for Brooklyn
+			case "K" || "B":
 				boroughArray[index] = "BROOKLYN";
 				break;
 			case "X":
@@ -121,7 +123,7 @@ function fixBorough(boroughArray){
 			case "Q":
 				boroughArray[index] = "QUEENS";
 				break;
-			case "":
+			case "" || "U":
 				boroughArray[index] = "UNREPORTED";
 				break;
 		}
