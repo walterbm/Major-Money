@@ -1,91 +1,91 @@
-ELECTION,OFFICECD,RECIPID,CANCLASS,RECIPNAME,COMMITTEE,FILING,SCHEDULE,PAGENO,SEQUENCENO,REFNO,DATE,REFUNDDATE,NAME,C_CODE,STRNO,STRNAME,APARTMENT,BOROUGHCD,CITY,STATE,ZIP,OCCUPATION,EMPNAME,EMPSTRNO,EMPSTRNAME,EMPCITY,EMPSTATE,AMNT,MATCHAMNT,PREVAMNT,PAY_METHOD,INTERMNO,INTERMNAME,INTSTRNO,INTSTRNM,INTAPTNO,INTCITY,INTST,INTZIP,INTEMPNAME,INTEMPSTNO,INTEMPSTNM,INTEMPCITY,INTEMPST,INTOCCUPA,PURPOSECD,EXEMPTCD,ADJTYPECD,RR_IND,SEG_IND,INT_C_CODE
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001282,1/16/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,100000.00,0.00,0.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001283,1/22/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,100000.00,0.00,100000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001284,1/28/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,300000.00,0.00,200000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001285,1/30/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,500000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001419,2/9/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,750000.00,0.00,1000000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001539,2/18/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,600000.00,0.00,1750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001545,2/25/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,400000.00,0.00,2350000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,7,ABC,,,R0001701,3/4/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,250000.00,0.00,2750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0002011,3/12/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,3000000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0002012,3/16/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,3500000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0002163,3/19/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1800000.00,0.00,4000000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003160,3/27/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,450000.00,0.00,5800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003161,4/1/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,6250000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003162,4/3/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,400000.00,0.00,6750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003163,4/7/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,3500000.00,0.00,7150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003164,4/9/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,600000.00,0.00,10650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003165,4/13/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,11250000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003166,4/16/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,11750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003417,4/22/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,12750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003418,4/23/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,600000.00,0.00,13250000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003483,4/27/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,3000000.00,0.00,13850000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003488,4/28/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,16850000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,8,ABC,,,R0003802,4/29/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1400000.00,0.00,17350000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0003869,5/12/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,3500000.00,0.00,18750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0003917,5/12/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,18750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0004424,5/19/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,2500000.00,0.00,22750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0004436,5/20/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,25250000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0004583,5/20/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,25250000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0004724,5/26/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,26750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0004798,5/27/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,27250000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0005023,6/1/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,600000.00,0.00,28250000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0005225,6/4/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,2000000.00,0.00,28850000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0005391,6/9/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,30850000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0005549,6/12/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,31350000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0005822,6/16/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,31850000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0005958,6/18/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,400000.00,0.00,32350000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0005959,6/19/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,2400000.00,0.00,32750000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0006152,6/23/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,350000.00,0.00,35150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0006298,6/25/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,550000.00,0.00,35500000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0006486,6/29/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,400000.00,0.00,36050000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0006735,6/30/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,100000.00,0.00,36450000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,9,ABC,,,R0006764,7/1/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,100000.00,0.00,36550000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0006785,7/13/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,4000000.00,0.00,36650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0007166,7/15/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1500000.00,0.00,40650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0007282,7/21/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,42150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0007516,7/23/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,43150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0007736,7/29/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,43650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0008235,8/6/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1500000.00,0.00,44650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0008410,8/11/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,46150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0008411,8/12/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,47150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0008689,8/14/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1500000.00,0.00,48150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0008784,8/17/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,49650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0008911,8/21/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,50650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0008967,8/24/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,51650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0009123,8/27/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1500000.00,0.00,52650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0009485,8/31/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,54150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0009818,9/9/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,55150000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0009819,9/10/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1900000.00,0.00,55650000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0009840,9/14/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,250000.00,0.00,57550000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0010148,9/15/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,400000.00,0.00,57800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0010157,9/16/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,3000000.00,0.00,58200000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0010299,9/18/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1500000.00,0.00,61200000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0010395,9/21/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,350000.00,0.00,62700000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,13,ABC,,,R0010435,9/24/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1750000.00,0.00,63050000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,14,ABC,,,R0010463,9/29/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,3000000.00,0.00,64800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,14,ABC,,,R0011075,10/1/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,4000000.00,0.00,67800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,14,ABC,,,R0011236,10/6/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,71800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,14,ABC,,,R0011359,10/9/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,3000000.00,0.00,72800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,14,ABC,,,R0011722,10/13/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,2000000.00,0.00,75800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,14,ABC,,,R0011908,10/15/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,8000000.00,0.00,77800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0012053,10/23/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,2000000.00,0.00,85800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0012307,10/29/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,2000000.00,0.00,87800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0012955,11/5/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,3000000.00,0.00,89800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0013147,11/10/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,5500000.00,0.00,92800000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0013597,11/12/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,98300000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0013761,11/16/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,2300000.00,0.00,99300000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0014097,11/18/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,500000.00,0.00,101600000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,15,ABC,,,R0014133,11/20/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,102100000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0014868,12/2/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1000000.00,0.00,103100000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015104,12/7/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,750000.00,0.00,104100000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015143,12/11/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,100000.00,0.00,104850000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015187,12/14/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,75000.00,0.00,104950000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015338,12/22/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,650000.00,0.00,105025000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015518,12/23/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,1100000.00,0.00,105675000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015553,12/24/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,560000.00,0.00,106775000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015632,12/29/2009,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,410000.00,0.00,107335000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015777,1/5/2010,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,80000.00,0.00,107745000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015789,1/6/2010,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,25000.00,0.00,107825000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015791,1/7/2010,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,10000.00,0.00,107850000.00,1,,,,,,,,,,,,,,,,,,N,N,
-2009,1,605,NP,"Bloomberg, Michael R",J,16,ABC,,,R0015801,1/11/2010,,"Bloomberg, Michael R",CAN,,,,M,New York,NY,10075,Mayor,City of New York,,City Hall,New York,NY,515000.00,0.00,107860000.00,1,,,,,,,,,,,,,,,,,,N,N,
+ELECTION,RECIPNAME,NAME,BOROUGHCD,CITY,STATE,ZIP,OCCUPATION,EMPNAME,AMNT
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,100000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,100000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,300000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,750000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,600000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,400000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,250000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1800000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,450000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,400000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,3500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,600000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,600000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,3000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1400000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,3500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,2500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,600000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,2000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,400000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,2400000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,350000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,550000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,400000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,100000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,100000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,4000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1900000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,250000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,400000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,3000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,350000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1750000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,3000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,4000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,3000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,2000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,8000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,2000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,2000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,3000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,5500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,2300000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,500000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1000000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,750000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,100000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,75000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,650000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,1100000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,560000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,410000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,80000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,25000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,10000
+2009,"Bloomberg, Michael R","Bloomberg, Michael R",M,New York,NY,10075,Mayor,City of New York,515000

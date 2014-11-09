@@ -48,7 +48,7 @@ function compileAmount(array){
 	var compiledArray = [];
 
 	for(var i=1; i<array.length; i++){
-		compiledArray[i-1] = parseFloat(array[i][28]);
+		compiledArray[i-1] = parseFloat(array[i][9]);
 	}
 
 	return compiledArray;
@@ -110,8 +110,11 @@ function fixBorough(boroughArray){
 				boroughArray[index] = "OUTSIDE NYC";
 				break;
 			//current designation for Brooklyn is "K"
+			case "K" :
+				boroughArray[index] = "BROOKLYN";
+				break;
 			//pre 1994 "B" was the designation for Brooklyn
-			case "K" || "B":
+			case "B" :
 				boroughArray[index] = "BROOKLYN";
 				break;
 			case "X":
@@ -326,11 +329,11 @@ function loadAllData(){
 
 			var campaign = $.csv.toArrays(data);
 
-			dinkins.borough = compileColumn(campaign,18);
-			dinkins.city = compileColumn(campaign,19);
-			dinkins.state = compileColumn(campaign,20);
-			dinkins.zips = compileColumn(campaign,21);
-			dinkins.occupation = compileColumn(campaign,22);
+			dinkins.borough = compileColumn(campaign,3);
+			dinkins.city = compileColumn(campaign,4);
+			dinkins.state = compileColumn(campaign,5);
+			dinkins.zips = compileColumn(campaign,6);
+			dinkins.occupation = compileColumn(campaign,7);
 			dinkins.amount = compileAmount(campaign);
 
 			$("#loading").append(".");
@@ -340,11 +343,11 @@ function loadAllData(){
 
 			var campaign = $.csv.toArrays(data);
 
-			giuliani.borough = compileColumn(campaign,18);
-			giuliani.city = compileColumn(campaign,19);
-			giuliani.state = compileColumn(campaign,20);
-			giuliani.zips = compileColumn(campaign,21);
-			giuliani.occupation = compileColumn(campaign,22);
+			giuliani.borough = compileColumn(campaign,3);
+			giuliani.city = compileColumn(campaign,4);
+			giuliani.state = compileColumn(campaign,5);
+			giuliani.zips = compileColumn(campaign,6);
+			giuliani.occupation = compileColumn(campaign,7);
 			giuliani.amount = compileAmount(campaign);
 
 			$("#loading").append(".");
@@ -354,13 +357,13 @@ function loadAllData(){
 
 			var campaign = $.csv.toArrays(data);
 
-			bloomberg.donorName = compileColumn(campaign,13);
-			bloomberg.borough = compileColumn(campaign,18);
-			bloomberg.city = compileColumn(campaign,19);
-			bloomberg.state = compileColumn(campaign,20);
-			bloomberg.zips = compileColumn(campaign,21);
-			bloomberg.occupation = compileColumn(campaign,22);
-			bloomberg.employer = compileColumn(campaign,23);
+			bloomberg.donorName = compileColumn(campaign,2);
+			bloomberg.borough = compileColumn(campaign,3);
+			bloomberg.city = compileColumn(campaign,4);
+			bloomberg.state = compileColumn(campaign,5);
+			bloomberg.zips = compileColumn(campaign,6);
+			bloomberg.occupation = compileColumn(campaign,7);
+			bloomberg.employer = compileColumn(campaign,8);
 			bloomberg.amount = compileAmount(campaign);
 
 			$("#loading").append(".");
@@ -370,11 +373,11 @@ function loadAllData(){
 
 			var campaign = $.csv.toArrays(data);
 
-			deBlasio.borough = compileColumn(campaign,18);
-			deBlasio.city = compileColumn(campaign,19);
-			deBlasio.state = compileColumn(campaign,20);
-			deBlasio.zips = compileColumn(campaign,21);
-			deBlasio.occupation = compileColumn(campaign,22);
+			deBlasio.borough = compileColumn(campaign,3);
+			deBlasio.city = compileColumn(campaign,4);
+			deBlasio.state = compileColumn(campaign,5);
+			deBlasio.zips = compileColumn(campaign,6);
+			deBlasio.occupation = compileColumn(campaign,7);
 			deBlasio.amount = compileAmount(campaign);
 
 			$("#loading").append(".");
